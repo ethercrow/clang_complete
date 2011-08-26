@@ -254,6 +254,9 @@ def getAbbr(strings):
 def echoClangDiagnostic():
   tu = getCurrentTranslationUnit()
 
+  if not tu:
+    return
+
   severityStrings = {
       Diagnostic.Ignored :"Ignored",
       Diagnostic.Note :"Note",
